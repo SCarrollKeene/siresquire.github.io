@@ -1,0 +1,278 @@
+:root {
+  --color-main: #8bd8bd;
+  --color-secondary: #243665;
+  --color-grey: #323232;
+  --color-black: #000;
+  --color-white: #fff;
+  --color-white-smoke: #f5f5f5;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
+  background-image: -webkit-linear-gradient(to bottom, var(--color-white), var(--color-white-smoke));
+  background-image: linear-gradient(to bottom, var(--color-white), var(--color-white-smoke));
+}
+
+.container {
+  max-width: 120rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2.2rem;
+  padding: 2.2rem;
+  overflow: hidden;
+}
+
+.container--theme {
+  font-size: 1.5rem;
+  background-color: var(--color-grey);
+}
+
+.logo {
+  margin-bottom: 1rem;
+}
+
+.logo img {
+  height: 15rem;
+  width: 15rem;
+}
+
+.intro {
+  font-size: 1.6rem;
+  padding: 2.2rem 2.2rem 0 2.2rem;
+}
+
+#title {
+  text-align: center;
+}
+
+.intro--theme {
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--color-main);
+}
+
+.intro--theme:link,
+.intro--theme:visited {
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, var(--color-main) 50%);
+  background-size: 230%;
+  transition: all .4s;
+}
+
+.intro--theme:hover,
+.intro--theme:active {
+  background-position: 100%;
+  color: var(--color-white);
+  transform: translateX(1rem);
+}
+
+::selection {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+}
+
+.shadow {
+  box-shadow: 0 1rem 1.5rem rgba(0, 0, 0,.3);
+  border: 1px solid;
+}
+
+.align {
+  text-align: center;
+}
+
+.header-theme--one {
+  color: var(--color-main);
+  margin: 9px 0 9px 0;
+}
+
+.header-theme--two {
+  color: var(--color-grey);
+}
+
+.grid-3 {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* TODO: make a class for p */
+p {
+  padding: 1.7rem;
+  line-height: 2.2rem;
+}
+
+.txt-wht {
+  color: var(--color-white-smoke);
+}
+
+.project {
+  display: block;
+  margin: 2rem;
+  max-width: 100%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin-bottom: 2rem;
+  transition: transform .3s;
+  outline-offset: 1rem;
+}
+
+.project:hover {
+  transform: translateY(-1.5rem) scale(1.03);
+  outline: .5rem solid var(--color-main);
+}
+
+.project a {
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--color-main);
+}
+
+.project a:hover {
+  color: var(--color-secondary);
+}
+
+.project-links {
+  text-align: center;
+  padding: 4rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+.fa {
+  margin-left: 2px;
+  padding: 1rem;
+  width: 2rem;
+  font-size: 3rem;
+  text-align: center;
+  text-decoration: none;
+  color: var(--color-white);
+}
+
+.fab {
+  margin-left: 2px;
+  padding: 1rem;
+  width: 2rem;
+  font-size: 3rem;
+  text-align: center;
+  text-decoration: none;
+  color: var(--color-white);
+}
+
+.fa:hover {
+  color: var(--color-main);
+  text-decoration: none;
+  transform: translateY(-3px);
+}
+
+.fab:hover {
+  color: var(--color-main);
+  text-decoration: none;
+  transform: translateY(-3px);
+}
+
+.fa,
+.fab:active {
+  transform: translateY(-1px);
+}
+
+.contact {
+  font-size: 2.4rem;
+  margin-bottom: 9px;
+}
+
+.links {
+  background-color: var(--color-grey);
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+/* Smaller Screens */
+
+/* 460px */
+@media only screen and (max-width: 28.75em) {
+  .logo {
+    text-align: center;
+  }
+  .intro p {
+    line-height: 1.8rem;
+  }
+  .container {
+    font-size: 1.6rem;
+    padding: 0;
+  }
+  .intro {
+    padding: 1.8rem 1.8rem 0 1.8rem;
+  }
+  #title {
+    font-size: 1.8rem;
+  }
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .project-links {
+    padding: 2rem;
+  }
+}
+
+/* 699px */
+@media only screen and (max-width: 43.6875em) {
+  #title {
+    font-size: 1.6rem;
+  }
+  .container {
+    font-size: 1.6rem;
+    padding: 0;
+  }
+  .logo {
+    text-align: center;
+  }
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 700px */
+@media only screen and (min-width: 43.75em) {
+  .logo,
+  #title {
+    text-align: center;
+    font-size: 2.2rem;
+  }
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 720px */
+@media only screen and (min-width: 45em) {
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 900px */
+@media only screen and (min-width: 56.25em) {
+  .intro p {
+    text-align: left;
+  }
+  #title {
+    font-size: 3rem;
+  }
+  .grid-3 {
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
